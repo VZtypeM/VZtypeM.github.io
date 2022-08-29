@@ -24,6 +24,11 @@ jobs:
         run: npm run lint:ts
       - name: Run styles lint and format check
         run: npm run lint:css
+      - name: Enviroment variables
+        env:
+          SECRET: Hello World
+        run: echo $SECRET
+          
   
   deploy:
     needs: test
